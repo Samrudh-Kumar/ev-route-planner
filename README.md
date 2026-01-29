@@ -46,5 +46,3 @@ This logic closely follows real-world EV navigation constraints instead of assum
 
 ---
 
-## 📁 Project Structure
-
