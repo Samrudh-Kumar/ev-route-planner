@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EV Charging Station Locator</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Mapbox CSS -->
+  <link
+    href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================= WELCOME MODAL ================= -->
+<div id="welcomeModal" class="modal">
+  <div class="modal-content">
+    <h2>Welcome 👋</h2>
+    <p>Tell us about your EV</p>
+
+    <input id="userName" placeholder="Your Name" />
+    <input id="vehicleType" placeholder="Vehicle Type (EV Car / Bike)" />
+    <input id="vehicleModel" placeholder="Vehicle Model" />
+    <input id="vehicleNumber" placeholder="Vehicle Number" />
+
+    <button id="startAppBtn">Continue</button>
+  </div>
+</div>
+
+<!-- ================= SIDEBAR ================= -->
+<div class="sidebar">
+  <div class="sidebar-top">
+    <h3 id="greeting"></h3>
+    <h2>⚡ EV Route Planner</h2>
+
+    <input id="start" placeholder="Start location" />
+    <input id="end" placeholder="Destination" />
+
+    <label class="range-label">Vehicle Range (km)</label>
+    <input id="range" type="number" placeholder="Eg: 300" />
+
+    <button id="routeBtn">Find Optimal Route</button>
+
+    <div id="info"></div>
+  </div>
+
+  <!-- Vehicle Info at Bottom -->
+  <div id="vehicleInfo" class="vehicle-info"></div>
+</div>
+
+<!-- ================= MAP ================= -->
+<div id="map"></div>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

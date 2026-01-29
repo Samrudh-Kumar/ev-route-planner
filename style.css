@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+}
+
+/* ================= MAP ================= */
+#map {
+  flex: 1;
+  height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 340px;
+  background: #0f172a;
+  color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-top h2 {
+  margin-bottom: 15px;
+}
+
+#greeting {
+  color: #22c55e;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  background: #22c55e;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #16a34a;
+}
+
+.range-label {
+  font-size: 13px;
+  color: #e5e7eb;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+#info {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* ================= VEHICLE CARD ================= */
+.vehicle-info {
+  background: rgba(255,255,255,0.06);
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #0f172a;
+  padding: 36px;
+  width: 340px;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+
+/* ✅ ONLY CHANGE: Welcome text color */
+.modal-content h2 {
+  color: #ffffff;
+}
+
+.modal-content p {
+  font-size: 14px;
+  color: #cbd5f5;
+  margin-bottom: 18px;
+}
+
+.modal-content input {
+  margin-bottom: 12px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  #map {
+    height: 60vh;
+  }
+}
